@@ -7,13 +7,13 @@ import java.util.StringJoiner;
  * @author Nowshad Hasan
  * @since 25/9/21 5:35 pm
  */
-public class OldStudent {
+public class OldStudent{
     /*
     We use this type of model class everywhere and everytime, where we've to generate getter-setter, constructor
     and implement equals, hashcode, toString etc.
     Sometimes, we use Lombok plugin to make these things a little easier. But it's a third party library
-    which uses reflection api to generate all these boilerplate code. It sometimes creates critical problem
-    when a project grows more and more.
+    which uses reflection api to generate all this boilerplate code. Sometimes it creates critical problems
+    when a project grows bigger.
      */
     public static void main(String[] args) {
         OldStudent student1 = new OldStudent("Harry Potter",16);

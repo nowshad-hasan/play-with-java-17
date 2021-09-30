@@ -8,7 +8,4 @@ package sealed_class;
 Tea can't extend Liquid class, as it was not permitted. But it can extend Water as this is non-sealed.
  */
 public class Tea extends Water {
-    class  Water1 extends Tea {
-
-    }
 }

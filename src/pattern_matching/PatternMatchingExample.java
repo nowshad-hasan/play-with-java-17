@@ -7,7 +7,7 @@ package pattern_matching;
 public class PatternMatchingExample {
 
     public static void main(String[] args) {
-        Book thriller = new Thriller("Murder on the Orient Express", "Agatha Cristie", "A man is killed on the train");
+        Book thriller = new Thriller("Murder on the Orient Express", "Agatha Cristie", "Someone was murdered on the train");
         Book autobiography = new AutoBiography("Long Walk to Freedom", "Nelson Mandela", "Freedom");
 
         printBookOld(thriller);
@@ -27,7 +27,7 @@ public class PatternMatchingExample {
             System.out.println(thriller.getSuspense());
         } else if (book instanceof AutoBiography) {
             AutoBiography biography = (AutoBiography) book; //must-do casting
-            System.out.println(biography.getLifeGoal());
+            System.out.println(biography.getContribution());
         }
     }
 
@@ -37,7 +37,7 @@ public class PatternMatchingExample {
         if (book instanceof Thriller thriller) {   /* casting in one-line */
             System.out.println(thriller.getSuspense());
         } else if (book instanceof AutoBiography biography) {   /* casting in one-line */
-            System.out.println(biography.getLifeGoal());
+            System.out.println(biography.getContribution());
         }
     }
 

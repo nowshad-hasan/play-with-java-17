@@ -27,12 +27,13 @@ public class NewSwitchExample {
         switch (day) {
             case SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY -> System.out.println("On day");
             case FRIDAY -> System.out.println("Off day");
-            default -> System.out.println("It's just another day");
+            default -> System.out.println("Just another day");
         }
     }
 
     // We can also return value from these switch-expressions.
-    // We must use semicolon at the end, as it works like a statement.
+    // We can store the return value in a variable or directly return that from the method.
+    // But we must use semicolon at the end, as it works like a statement.
     private static int getDayExpense(WeekDay day) {
         int val = switch (day) {
             case SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY -> 100;
@@ -54,14 +55,14 @@ public class NewSwitchExample {
     private static int getDayExpense2(WeekDay day) {
         return switch (day) {
             case SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY -> 100;
-//            case FRIDAY -> 200;  // only using these like without 'default', creates compile error
+//            case FRIDAY -> 200;  // without using 'default', this line creates compile error
 //            case FRIDAY, SATURDAY -> 200  // valid
             default -> 200; // valid
         };
     }
 
-    // We must use 'default' if we use any generalised parameter type like int, String etc.
-    // Because it can't determine what value is missing, so it expects a general fall-through 'default'.
+    // We must use 'default' if we have int, String etc common parameter type.
+    // Because it can't determine which value is missing, so it expects a general fall-through => 'default'.
     private static int getDayExpense3(int indexOfWeek) {
         return switch (indexOfWeek) {
             case 1, 2, 3, 4, 5 -> 100;
@@ -69,7 +70,7 @@ public class NewSwitchExample {
         };
     }
 
-    // We can also do some extra work inside the case block and for returning value we've to use 'yield' keyword.
+    // We can also do some extra work inside the case block. When returning value we've to use 'yield' keyword.
     private static int getExpense4(WeekDay day) {
         return switch (day) {
             case SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY -> {
@@ -80,7 +81,7 @@ public class NewSwitchExample {
             case FRIDAY, SATURDAY -> {
                 yield goToRestaurant();
                 /*
-                We can also inline this, like that.
+                We can also write this inline.
                 yield goToRestaurant();
                  */
             }

@@ -6,7 +6,7 @@ package pattern_matching;
  */
 public class PatternMatchingExample2 {
     public static void main(String[] args) {
-        Object integer = Integer.valueOf(10);
+        Object integer = 10;
         Object string = "10";
 
         printObjectOld(integer);
@@ -21,7 +21,7 @@ public class PatternMatchingExample2 {
     private static void printObjectOld(Object val) {
         if (val instanceof Integer) {
             var number = (Integer) val;
-            System.out.println(number.toString());
+            System.out.println(number.doubleValue());
         } else if (val instanceof String) {
             var text = (String) val;
             System.out.println(text.toUpperCase());
@@ -31,7 +31,7 @@ public class PatternMatchingExample2 {
     private static void printObjectNew(Object val) {
         // no need of explicit typecast
         if (val instanceof Integer number) {
-            System.out.println(number.toString());
+            System.out.println(number.doubleValue());
         } else if (val instanceof String text) {
             System.out.println(text.toUpperCase());
         }

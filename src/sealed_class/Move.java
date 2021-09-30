@@ -5,19 +5,23 @@ package sealed_class;
  * @since 27/9/21 8:57 am
  */
 /*
-    Interface can be sealed or non-sealed and it can permit another interface or class.
+    Interface can be sealed or non-sealed, and it can permit other interface or class.
     Permitted interface must be sealed/non-sealed and class must be sealed/non-sealed/final.
+    Sealed interface and permitted interface/class must be in same module. For unnamed module, they must be in same package.
  */
 public sealed interface Move permits Fly, Run {
     void move();
 }
 
+// Fly is non-sealed. So, it can be implemented by any class or extended by any interface.
 non-sealed interface Fly extends Move {
 }
 
+// starts another sealed hierarchy
 sealed interface Run extends Move permits Marathon {
 }
 
+// No need to add extra keyword. As Fly is made non-sealed.
 class Bird implements Fly {
 
     @Override
@@ -26,6 +30,7 @@ class Bird implements Fly {
     }
 }
 
+// Marathon needs to be final/sealed/non-sealed, as Run is sealed.
 final class Marathon implements Run {
     @Override
     public void move() {

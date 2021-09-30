@@ -5,11 +5,11 @@ package pattern_matching;
  * @since 26/9/21 9:51 pm
  */
 public class AutoBiography extends Book {
-    String lifeGoal;
+    String contribution;
 
-    public AutoBiography(String name, String author, String lifeGoal) {
+    public AutoBiography(String name, String author, String contribution) {
         super(name, author);
-        this.lifeGoal = lifeGoal;
+        this.contribution = contribution;
     }
 
 
@@ -18,7 +18,7 @@ public class AutoBiography extends Book {
         return "It's an autobiography, named \"" + name + "\" written by " + author;
     }
 
-    String getLifeGoal() {
-        return lifeGoal;
+    String getContribution() {
+        return contribution;
     }
 }

@@ -5,11 +5,16 @@ package sealed_class;
  * @since 27/9/21 8:22 am
  */
 /*
-    Which classes are permitted to extend this Liquid class, must be sealed/non-sealed/final.
-    1. sealed - starts another sealed hierarchy
-    2. non-sealed - can be extended by any class
-    3. final - can not be extended
+    Some concepts about sealed class.
+    1. Which classes are permitted to extend this Liquid class, must be sealed/non-sealed/final.
+        a. sealed - starts another sealed hierarchy
+        b. non-sealed - can be extended by any class (stops sealing)
+        c. final - can not be extended (stops sealing)
+    2. Sealed class can be abstract
+    3. Sealed class and permitted subclass must be in same module (Module introduced in java 9).
+       If they are declared in unnamed module, they must be in same package.
  */
+    /* 'permits Thriller' not allowed as it is in another package */
 public sealed class Liquid permits Water, Honey, Milk {
 
 }
