@@ -22,7 +22,7 @@ public class NewSwitchExample {
         }
     }
 
-    // We can also use 'default' if we want generalize something.
+    // We can also use 'default' if we want to generalize something.
     private static void getDayStatus2(WeekDay day) {
         switch (day) {
             case SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY -> System.out.println("On day");
@@ -61,8 +61,8 @@ public class NewSwitchExample {
         };
     }
 
-    // We must use 'default' if we have int, String etc common parameter type.
-    // Because it can't determine which value is missing, so it expects a general fall-through => 'default'.
+    // We must use 'default' if we have int, String etc. data type.
+    // Because it can't determine which value is missing, so it expects a general fall-through => default.
     private static int getDayExpense3(int indexOfWeek) {
         return switch (indexOfWeek) {
             case 1, 2, 3, 4, 5 -> 100;
@@ -70,8 +70,8 @@ public class NewSwitchExample {
         };
     }
 
-    // We can also do some extra work inside the case block. When returning value we've to use 'yield' keyword.
-    private static int getExpense4(WeekDay day) {
+    // We can also do some extra work inside the case block. When returning value, we've to use 'yield' keyword.
+    private static int getDayExpense4(WeekDay day) {
         return switch (day) {
             case SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY -> {
                 var val = eatLunch();
@@ -80,10 +80,6 @@ public class NewSwitchExample {
 
             case FRIDAY, SATURDAY -> {
                 yield goToRestaurant();
-                /*
-                We can also write this inline.
-                yield goToRestaurant();
-                 */
             }
         };
     }

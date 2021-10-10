@@ -14,10 +14,10 @@ public class Thriller extends Book {
 
     @Override
     String about() {
-        return "It's a thriller. The name is \"" + name + "\", author is " + author;
+        return "It's a thriller, named \"" + name + "\", written by " + author;
     }
 
     String getSuspense() {
-        return suspense;
+        return "Suspense: " + suspense;
     }
 }

@@ -15,10 +15,10 @@ public class AutoBiography extends Book {
 
     @Override
     String about() {
-        return "It's an autobiography, named \"" + name + "\" written by " + author;
+        return "It's an autobiography, named \"" + name + "\", written by " + author;
     }
 
     String getContribution() {
-        return contribution;
+        return "Contribution: " + contribution;
     }
 }

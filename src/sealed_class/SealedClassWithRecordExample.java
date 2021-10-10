@@ -5,7 +5,7 @@ package sealed_class;
  * @since 30/9/21 8:06 am
  */
 /*
-Sealed class nicely works with record type, as record is implicitly final.
+Sealed class nicely works with record, as record is implicitly final.
  */
 public class SealedClassWithRecordExample {
     sealed interface Exam permits Student {

@@ -7,10 +7,10 @@ package others;
 public class NullPointerExceptionExample {
 
     /*
-    At Java 1.8, Exception in thread "main" java.lang.NullPointerException
+    Stack trace at Java 1.8: Exception in thread "main" java.lang.NullPointerException
 	at exception.NullPointerException.main(NullPointerException.java:20)
 
-    At Java 17, Exception in thread "main" java.lang.NullPointerException:
+    Stack trace at Java 17: Exception in thread "main" java.lang.NullPointerException:
     Cannot read field "birthPlace" because "book.author" is null at
     others.NullPointerExceptionExample.main(NullPointerExceptionExample.java:20)
      */

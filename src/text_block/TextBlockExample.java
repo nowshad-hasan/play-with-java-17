@@ -7,8 +7,8 @@ package text_block;
 public class TextBlockExample {
     /*
      Our new newHtml and newSql variable have much cleaner string initialization.
-     Text block prints each line as new line. If we don't want new line somewhere, we can add \ to suppress it.
-     By default, space is removed from each of the line. If we want a space, we've to add \s at the end of the line.
+     Text block prints each line as new line. If we don't want new line somewhere, we can add '\' to suppress it.
+     By default, space is removed from each of the line. If we want a space, we've to add '\s' at the end of the line.
      We can find the generated class at out/ folder where it actually creates string with newline like before.
      */
     public static void main(String[] args) {
@@ -40,7 +40,7 @@ public class TextBlockExample {
                 "WHERE id=100;";
 
         String newSql = """
-                SELECT * 
+                SELECT *
                 FROM student
                 WHERE id=100;
                 """;

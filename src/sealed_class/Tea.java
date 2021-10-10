@@ -5,7 +5,6 @@ package sealed_class;
  * @since 27/9/21 8:24 am
  */
 /*
-Tea can't extend Liquid class, as it was not permitted. But it can extend Water as this is non-sealed.
+Tea can't extend Liquid class, as it is not permitted. But it can extend Water as this is non-sealed.
  */
-public class Tea extends Water {
-}
+public class Tea extends Water { }

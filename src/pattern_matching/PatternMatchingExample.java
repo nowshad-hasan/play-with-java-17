@@ -23,10 +23,10 @@ public class PatternMatchingExample {
         System.out.println(book.about());
 
         if (book instanceof Thriller) {
-            Thriller thriller = (Thriller) book; // must-do casting
+            Thriller thriller = (Thriller) book; // must-do explicit casting
             System.out.println(thriller.getSuspense());
         } else if (book instanceof AutoBiography) {
-            AutoBiography biography = (AutoBiography) book; //must-do casting
+            AutoBiography biography = (AutoBiography) book; // must-do explicit casting
             System.out.println(biography.getContribution());
         }
     }

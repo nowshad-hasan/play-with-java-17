@@ -18,8 +18,8 @@ package sealed_class;
     1. Move is our base interface which permits Fly, Run to extend Move. But these need to be sealed/non-sealed.
     2. Fly extends Move, mark as non-sealed. That means, any class/interface can easily work with Fly now.
        So, Bird implements Move without any special keyword.
-    3. Run extends Move, but it marked as sealed. So, when Marathon implements it, it needs to sealed/non-sealed/final
-       as the requirement of sealed class. We make it final though.
+    3. Run extends Move, but it marked as sealed. So, when Marathon implements it, it needs to be sealed/non-sealed/final
+       as the requirement of sealed class. We make it final, then.
  */
 public class SealedClassExample {
 

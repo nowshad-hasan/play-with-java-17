@@ -14,14 +14,12 @@ public sealed interface Move permits Fly, Run {
 }
 
 // Fly is non-sealed. So, it can be implemented by any class or extended by any interface.
-non-sealed interface Fly extends Move {
-}
+non-sealed interface Fly extends Move { }
 
 // starts another sealed hierarchy
-sealed interface Run extends Move permits Marathon {
-}
+sealed interface Run extends Move permits Marathon { }
 
-// No need to add extra keyword. As Fly is made non-sealed.
+// As Fly is non-sealed, Bird easily implements it without extra keyword.
 class Bird implements Fly {
 
     @Override

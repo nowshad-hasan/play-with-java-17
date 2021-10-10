@@ -20,16 +20,16 @@ public class PatternMatchingExample2 {
 
     private static void printObjectOld(Object val) {
         if (val instanceof Integer) {
-            var number = (Integer) val;
+            var number = (Integer) val; // explicit type-cast
             System.out.println(number.doubleValue());
         } else if (val instanceof String) {
-            var text = (String) val;
+            var text = (String) val;    // explicit type-cast
             System.out.println(text.toUpperCase());
         }
     }
 
     private static void printObjectNew(Object val) {
-        // no need of explicit typecast
+        // no need of explicit type-cast
         if (val instanceof Integer number) {
             System.out.println(number.doubleValue());
         } else if (val instanceof String text) {
