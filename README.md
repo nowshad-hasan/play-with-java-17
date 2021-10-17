@@ -1,7 +1,7 @@
 # Play With Java 17
 
-In this project, I practised and discussed the new features from Java 11 to Java 17, the last LTS of Java, released on 13 September 2021.
-I published an article at [Medium](https://medium.com/@nowshadapu/java-17-a-new-lts-and-whats-new-from-last-lts-java-11-8b56aaaa2326) discussing the features.
+### In this project, I practised and discussed the new features from Java 11 to Java 17, the last LTS of Java, released on 13 September 2021.
+### I published an article at [Medium](https://medium.com/@nowshadapu/java-17-a-new-lts-and-whats-new-from-last-lts-java-11-8b56aaaa2326) discussing the features.
 ---
 
 Features:
